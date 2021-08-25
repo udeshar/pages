@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+.welcomeContainer{
+    background-image: url('../images/Background.png');
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+.welcomeContainer .welcomeInner{
+    padding: 0% 20%;
+}
+.welcomeContainer .welcomeInner .welcomeLine{
+    font-size: 22px;
+    color: rgb(26, 198, 221);
+    font-weight: bold;
+    opacity: 0;
+    animation: welcomeLine 1s ease-out forwards 3.5s;
+}
+@keyframes welcomeLine{
+    from{
+        transform: translateY(40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.welcomeContainer .welcomeInner .welc-desc-container{
+    overflow: visible;
+    transition: 1s;
+    animation: expand 1s ease-out forwards 3s;
+    height: 0px;
+}
+@keyframes  expand{
+    from{
+        height: 0px;
+    }
+    to{
+        height: 310px;
+    }
+}
+@keyframes goUp{
+    to{
+        transform: translateY(-15vh);
+    }
+}
+.welcomeContainer .welcomeInner .welcomeDesc{
+    color: grey;
+    font-size: 19px;
+    opacity: 0;
+    animation: welcomeDesc 1s ease-out forwards 3.8s;
+}
+@keyframes welcomeDesc{
+    from{
+        transform: translateY(40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.welcomeContainer .welcomeInner .welcomeBtn{
+    background-color: #f57e53;
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: bold;
+    padding: 12px 40px;
+    font-family: poppins;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .8s;
+}
+.welcomeContainer .welcomeInner .welcomeBtn:hover{
+    background-color: #ff6c36;
+}
+.welcomeContainer .welcomeInner .rippleBtn{
+    border-radius: 18px;
+     opacity: 0;
+    animation: welcomeRipBtn 1s ease-out forwards 4s;
+}
+.welcomeContainer .welcomeInner .path1{
+    stroke-dasharray: 1053;
+    stroke-dashoffset: 1053;
+    animation: fillStroke .5s ease forwards .3s;
+}
+.welcomeContainer .welcomeInner .path2{
+    stroke-dasharray: 615;
+    stroke-dashoffset: 615;
+    animation: fillStroke .5s ease forwards 1.8s;
+}
+.welcomeContainer .welcomeInner .path3{
+    stroke-dasharray: 410;
+    stroke-dashoffset: 410;
+    animation: fillStroke .5s ease forwards .6s;
+}
+.welcomeContainer .welcomeInner .path4{
+    stroke-dasharray: 656;
+    stroke-dashoffset: 656;
+    animation: fillStroke .5s ease forwards .9s;
+}
+.welcomeContainer .welcomeInner .path5{
+    stroke-dasharray: 706;
+    stroke-dashoffset: 706;
+    animation: fillStroke .5s ease forwards 1.5s;
+}
+.welcomeContainer .welcomeInner .path6{
+    stroke-dasharray: 982;
+    stroke-dashoffset: 982;
+    animation: fillStroke .5s ease forwards;
+}
+.welcomeContainer .welcomeInner .path7{
+    stroke-dasharray: 615;
+    stroke-dashoffset: 615;
+    animation: fillStroke .5s ease forwards 1.2s;
+}
+@keyframes fillStroke{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+.welcomeContainer .welcomeInner .notNow{
+    color: grey !important;
+    text-decoration: none;
+    opacity: 0;
+    animation: welcomeRipBtn 1s ease-out forwards 4.2s;
+}
+.welcomeContainer .welcomeInner .notNow2{
+    animation: welcomeRipBtn 1s ease-out forwards 4.2s;
+}
+@keyframes welcomeRipBtn{
+    from{
+        transform: translateY(40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@media only screen and ( max-width : 480px ) and ( min-width :  381px ){
+    .welcomeContainer .welcomeInner .welcomePhrase{
+        width: 375px;
+    }
+    .welcomeContainer .welcomeInner .welcomeLine{
+        font-size: 18px;
+        margin: 0px 0px;
+    }
+    .welcomeContainer .welcomeInner .welcomeDesc{
+        font-size: 15px;
+    }
+    .welcomeContainer .welcomeInner .welcomeBtn{
+        font-size: 16px
+    }
+    .welcomeContainer .welcomeInner{
+        padding: 0% 25px;
+    }
+    @keyframes  expand{
+        from{
+            height: 0px;
+        }
+        to{
+            height: 340px;
+        }
+    }
+}
+@media only screen and ( max-width : 380px ){
+    .welcomeContainer .welcomeInner .welcomePhrase{
+        width: 275px;
+    }
+    .welcomeContainer .welcomeInner .welcomeLine{
+        font-size: 16px;
+        margin: 0px 0px;
+    }
+    .welcomeContainer .welcomeInner .welcomeDesc{
+        font-size: 13px;
+    }
+    .welcomeContainer .welcomeInner .welcomeBtn{
+        font-size: 14px
+    }
+    .welcomeContainer .welcomeInner{
+        padding: 0% 25px;
+    }
+}
+@media only screen and ( max-width : 1052px ) and ( min-width :  734px ){
+    @keyframes  expand{
+        from{
+            height: 0px;
+        }
+        to{
+            height: 370px;
+        }
+    }
+}
+@media only screen and ( max-width :733px ) and ( min-width :  480px ){
+    .welcomeContainer .welcomeInner .welcomePhrase{
+        width: 375px;
+    }
+    .welcomeContainer .welcomeInner .welcomeLine{
+        font-size: 18px;
+        margin: 0px 0px;
+    }
+    .welcomeContainer .welcomeInner .welcomeDesc{
+        font-size: 15px;
+    }
+    .welcomeContainer .welcomeInner .welcomeBtn{
+        font-size: 16px
+    }
+    .welcomeContainer .welcomeInner{
+        padding: 0% 45px;
+    }
+}
