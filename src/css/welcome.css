@@ -8,10 +8,12 @@
     height: 100vh;
     width: 100%;
     object-fit: cover;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    overflow: hidden;
     font-family: 'Poppins', sans-serif;
 }
 .welcomeContainer .welcomeInner{
@@ -53,7 +55,7 @@
     }
 }
 .welcomeContainer .welcomeInner .welcomeDesc{
-    color: grey;
+    color: #000;
     font-size: 19px;
     opacity: 0;
     animation: welcomeDesc 1s ease-out forwards 3.8s;
@@ -95,17 +97,17 @@
 .welcomeContainer .welcomeInner .path2{
     stroke-dasharray: 615;
     stroke-dashoffset: 615;
-    animation: fillStroke .5s ease forwards 1.8s;
+    animation: fillStroke .5s ease forwards .6s;
 }
 .welcomeContainer .welcomeInner .path3{
     stroke-dasharray: 410;
     stroke-dashoffset: 410;
-    animation: fillStroke .5s ease forwards .6s;
+    animation: fillStroke .5s ease forwards .9s;
 }
 .welcomeContainer .welcomeInner .path4{
     stroke-dasharray: 656;
     stroke-dashoffset: 656;
-    animation: fillStroke .5s ease forwards .9s;
+    animation: fillStroke .5s ease forwards 1.2s;
 }
 .welcomeContainer .welcomeInner .path5{
     stroke-dasharray: 706;
@@ -115,12 +117,12 @@
 .welcomeContainer .welcomeInner .path6{
     stroke-dasharray: 982;
     stroke-dashoffset: 982;
-    animation: fillStroke .5s ease forwards;
+    animation: fillStroke .5s ease forwards 1.8s;
 }
 .welcomeContainer .welcomeInner .path7{
     stroke-dasharray: 615;
     stroke-dashoffset: 615;
-    animation: fillStroke .5s ease forwards 1.2s;
+    animation: fillStroke .5s ease forwards 2.1s;
 }
 @keyframes fillStroke{
     to{
@@ -145,10 +147,25 @@
         transform: translateY(0px);
     }
 }
+.welcomeContainer .soloLogo{
+    width: 160px;
+    margin-top: 13px;
+    opacity: 0;
+    animation: soloLogoAnime 1s linear forwards 3.5s;
+}
+@keyframes soloLogoAnime{
+    from{
+        transform: scale(0.9);
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 
 @media only screen and ( max-width : 480px ) and ( min-width :  381px ){
     .welcomeContainer .welcomeInner .welcomePhrase{
-        width: 375px;
+        width: 300px;
     }
     .welcomeContainer .welcomeInner .welcomeLine{
         font-size: 18px;
@@ -168,8 +185,13 @@
             height: 0px;
         }
         to{
-            height: 340px;
+            height: 390px;
         }
+    }
+    .welcomeContainer .soloLogo{
+        width: 130px;
+        margin-top: 9px;
+        margin-bottom: 6px;
     }
 }
 @media only screen and ( max-width : 380px ){
@@ -188,6 +210,19 @@
     }
     .welcomeContainer .welcomeInner{
         padding: 0% 25px;
+    }
+    .welcomeContainer .soloLogo{
+        width: 130px;
+        margin-top: 2px;
+        margin-bottom: 6px;
+    }
+    @keyframes  expand{
+        from{
+            height: 0px;
+        }
+        to{
+            height: 380px;
+        }
     }
 }
 @media only screen and ( max-width : 1052px ) and ( min-width :  734px ){

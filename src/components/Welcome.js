@@ -1,21 +1,59 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import Ripples from 'react-ripples';
+import logo from '../images/soloLogo.png';
+import { Fireworks } from 'fireworks-js/dist/react'
 import '../css/welcome.css';
+import '../css/bubbles.scss';
 
 const Welcome = () => {
     const main = useRef(null);
     const forHeight = useRef(null);
+    const particleContainer = useRef(null);
+    const [balls,setBalls] = useState([]);
     useEffect(() => {
-        console.log(forHeight.current.offsetHeight)
-        const paths = main.current.children;
-        for(let i=1;i<paths.length;i++){
-            console.log(paths[i].getTotalLength())
+        animateParticles();
+    },[])
+
+    const options = {
+        speed: 3,
+        delay : {
+            min:30,
+            max:50
         }
-    })
+    }
+    const style = {
+        left: 0,
+        top: 0,
+        width: '100%',
+        height: '100%',
+        position: 'fixed',
+      }
+
+    const animateParticles = () => {
+        const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
+        const numBalls = 50;
+        for (let i = 1; i <= numBalls; i++) {
+            let background = colors[Math.floor(Math.random() * colors.length)];
+            let left = `${Math.floor(Math.random() * 100)}vw`;
+            let top = `${Math.floor(Math.random() * 100)}vh`;
+            let transform = `scale(${Math.random()})`;
+            let width = `${Math.random()+0.3}em`;
+            let height = width;
+            let ball = <div className="ball" style={{background:background,left:left, top:top,transform:transform, height:height, width:width}} key={i}></div>
+            setBalls(balls=>[...balls,ball]);
+        }
+    }
+    
     return (
         <div className='welcomeContainer' >
+            <Fireworks options={options} style={style} />
+
+            <div ref={particleContainer}>
+                { balls.map((data)=>{
+                    return (data)
+                }) }
+            </div>
             <div className="welcomeInner">
-                {/* <p>Congratulations</p> */}
                 <svg className="welcomePhrase" ref={main} width="400" height="80" viewBox="0 0 948 140" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="-0.276001" y="0.0639954" width="948" height="140" fill="black">
                         <rect fill="white" x="-0.276001" y="0.0639954" width="948" height="140"/>
@@ -37,6 +75,7 @@ const Welcome = () => {
                 </svg>
 
                 <div className="welc-desc-container" ref={forHeight}>
+                    <img src={logo} alt="solo logo" className="soloLogo" />
                     <p className="welcomeLine">We are delighted to have you with us</p>
                     <p className="welcomeDesc">SOLO is a unique collaboration platform that brings together Universities, Companies, and Students in order to streamline the internship process for all sides. SOLO will allow students to browse a multitude of available internships, participate in hackathons, as well as take courses to gain more knowledge of their industry.</p>
                     <Ripples className="rippleBtn">

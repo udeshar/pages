@@ -1,0 +1,19 @@
+.welcomeContainer .ball{
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.2;
+}
+$positions : ( 8em, 9em, -9em, 10em,-10em, 5em,-6em, 6em,-7em, 7em,-8em, 8em);
+@for $i from 0 to 49 {
+    .welcomeContainer .ball:nth-child( #{$i} ){
+        animation : animatee-#{$i} random(8)+4 + s ease-in-out infinite alternate;
+    }
+    @keyframes animatee-#{$i}{
+        from{
+            transform: translate(0,0);
+        }
+        to{
+            transform:translate( nth($positions, random(11)), nth($positions, random(11)) )
+        }
+    }
+}
