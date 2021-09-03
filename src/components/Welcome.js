@@ -79,11 +79,11 @@ const Welcome = () => {
                     <img src={logo} alt="solo logo" className="soloLogo" />
                     <p className="collegeName">Agnel Institute of Technology and Design (AITD)</p>
                     <p className="welcomeLine">We are delighted to have you with us</p>
-                    <p className="welcomeDesc">SOLO is a unique collaboration platform that brings together Universities, Companies, and Students in order to streamline the internship process for all sides. SOLO will allow students to browse a multitude of available internships, participate in hackathons, as well as take courses to gain more knowledge of their industry.</p>
+                    {/* <p className="welcomeDesc">SOLO is a unique collaboration platform that brings together Universities, Companies, and Students in order to streamline the internship process for all sides. SOLO will allow students to browse a multitude of available internships, participate in hackathons, as well as take courses to gain more knowledge of their industry.</p> */}
                     <Ripples className="rippleBtn">
                         <button className="welcomeBtn">Get Started</button>
                     </Ripples>
-                    <p className="notNow2"><a className="notNow" href="#">Not now</a></p>
+                    {/* <p className="notNow2"><a className="notNow" href="#">Not now</a></p> */}
                 </div>
                 
             </div>

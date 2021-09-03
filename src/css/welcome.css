@@ -21,8 +21,9 @@
     padding: 0% 20%;
 }
 .welcomeContainer .welcomeInner .welcomeLine{
-    font-size: 22px;
+    font-size: 26px;
     color: rgb(26, 198, 221);
+    margin-bottom: 23px;
     font-weight: bold;
     opacity: 0;
     animation: welcomeLine 1s ease-out forwards 3.5s;
@@ -47,7 +48,7 @@
         height: 0px;
     }
     to{
-        height: 440px;
+        height: 320px;
     }
 }
 @keyframes goUp{
@@ -149,7 +150,7 @@
     }
 }
 .welcomeContainer .soloLogo{
-    width: 160px;
+    width: 200px;
     margin-top: 13px;
     opacity: 0;
     animation: soloLogoAnime 1s linear forwards 3.5s;
@@ -165,7 +166,7 @@
 }
 .welcomeContainer .toText{
     font-family: 'Dancing Script', cursive;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
     margin: 4px;
     color: rgb(80, 80, 80);
@@ -173,7 +174,7 @@
     animation: welcomeRipBtn 1s ease-out forwards 3.8s;
 }
 .welcomeContainer .collegeName{
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
     color:#ff6c36;
 
@@ -200,6 +201,7 @@
     .welcomeContainer .welcomeInner .welcomeLine{
         font-size: 18px;
         margin: 0px 0px;
+        margin-bottom: 15px;
     }
     .welcomeContainer .welcomeInner .welcomeDesc{
         font-size: 15px;
@@ -215,7 +217,7 @@
             height: 0px;
         }
         to{
-            height: 460px;
+            height: 250px;
         }
     }
     .welcomeContainer .soloLogo{
@@ -223,8 +225,15 @@
         margin-top: 9px;
         margin-bottom: 6px;
     }
+    .welcomeContainer .toText{
+        font-size: 25px;
+    }
 }
+
 @media only screen and ( max-width : 320px ){
+    .welcomeContainer .toText{
+        font-size: 25px;
+    }
     .welcomeContainer .welcomeInner .notNow{
         font-size: 13px;
     }
@@ -242,6 +251,7 @@
     .welcomeContainer .welcomeInner .welcomeLine{
         font-size: 16px;
         margin: 0px 0px;
+        margin-bottom: 10px;
     }
     .welcomeContainer .welcomeInner .welcomeDesc{
         font-size: 13px;
@@ -263,11 +273,14 @@
             height: 0px;
         }
         to{
-            height: 430px;
+            height: 220px;
         }
     }
 }
 @media only screen and ( max-width : 380px ) and (min-width : 321px ){
+    .welcomeContainer .toText{
+        font-size: 25px;
+    }
     .welcomeContainer .collegeName{
         font-size: 14px;
     }
@@ -277,6 +290,7 @@
     .welcomeContainer .welcomeInner .welcomeLine{
         font-size: 16px;
         margin: 0px 0px;
+        margin-bottom: 15px;
     }
     .welcomeContainer .welcomeInner .welcomeDesc{
         font-size: 13px;
@@ -297,14 +311,15 @@
             height: 0px;
         }
         to{
-            height: 380px;
+            height: 230px;
         }
     }
 }
 @media only screen and ( max-width : 1052px ) and ( min-width :  734px ){
     .welcomeContainer .welcomeInner .welcomeLine{
-        font-size: 18px;
+        font-size: 28px;
         margin: 0px 0px;
+        margin-bottom: 15px;
     }
     .welcomeContainer .welcomeInner .welcomeDesc{
         font-size: 15px;
@@ -314,7 +329,7 @@
             height: 0px;
         }
         to{
-            height: 400px;
+            height: 300px;
         }
     }
 }
@@ -328,6 +343,7 @@
     .welcomeContainer .welcomeInner .welcomeLine{
         font-size: 18px;
         margin: 0px 0px;
+        margin-bottom: 15px;
     }
     .welcomeContainer .welcomeInner .welcomeDesc{
         font-size: 15px;
