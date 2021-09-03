@@ -17,8 +17,13 @@ const Welcome = () => {
     const options = {
         speed: 3,
         delay : {
-            min:30,
-            max:50
+            min:20,
+            max:30
+        },
+        particles : 100,
+        brightness : {
+            min: 30,
+            max : 40
         }
     }
     const style = {
@@ -46,7 +51,7 @@ const Welcome = () => {
     
     return (
         <div className='welcomeContainer' >
-            <Fireworks options={options} style={style} />
+            <Fireworks options={options} style={style} particles={100} explosion={10} />
 
             <div ref={particleContainer}>
                 { balls.map((data)=>{
