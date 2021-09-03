@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 .welcomeContainer{
     background-image: url('../images/Background.png');
     background-size: auto;
@@ -46,7 +47,7 @@
         height: 0px;
     }
     to{
-        height: 310px;
+        height: 440px;
     }
 }
 @keyframes goUp{
@@ -55,7 +56,7 @@
     }
 }
 .welcomeContainer .welcomeInner .welcomeDesc{
-    color: #000;
+    color: rgb(59, 59, 59);
     font-size: 19px;
     opacity: 0;
     animation: welcomeDesc 1s ease-out forwards 3.8s;
@@ -162,8 +163,37 @@
         opacity: 1;
     }
 }
+.welcomeContainer .toText{
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 4px;
+    color: rgb(80, 80, 80);
+    opacity: 0;
+    animation: welcomeRipBtn 1s ease-out forwards 3.8s;
+}
+.welcomeContainer .collegeName{
+    font-size: 24px;
+    font-weight: bold;
+    color:#ff6c36;
+
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    /* margin: 0 auto; */
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    animation: typing 3.5s linear forwards 4.5s;
+}
+@keyframes typing {
+    from { width: 0;opacity: 1;  }
+    to { width: 100%; opacity:1; }
+}
 
 @media only screen and ( max-width : 480px ) and ( min-width :  381px ){
+    .welcomeContainer .collegeName{
+        font-size: 15px;
+    }
     .welcomeContainer .welcomeInner .welcomePhrase{
         width: 300px;
     }
@@ -175,7 +205,7 @@
         font-size: 15px;
     }
     .welcomeContainer .welcomeInner .welcomeBtn{
-        font-size: 16px
+        font-size: 16px;
     }
     .welcomeContainer .welcomeInner{
         padding: 0% 25px;
@@ -185,7 +215,7 @@
             height: 0px;
         }
         to{
-            height: 390px;
+            height: 460px;
         }
     }
     .welcomeContainer .soloLogo{
@@ -194,7 +224,53 @@
         margin-bottom: 6px;
     }
 }
-@media only screen and ( max-width : 380px ){
+@media only screen and ( max-width : 320px ){
+    .welcomeContainer .welcomeInner .notNow{
+        font-size: 13px;
+    }
+    .welcomeContainer .collegeName{
+        font-size: 12px;
+    }
+    .welcomeContainer .toText{
+        margin-top: 0px;
+    }
+    .welcomeContainer .welcomeInner .welcomePhrase{
+        width: 275px;
+        margin-bottom: 0px;
+        line-height: 0;
+    }
+    .welcomeContainer .welcomeInner .welcomeLine{
+        font-size: 16px;
+        margin: 0px 0px;
+    }
+    .welcomeContainer .welcomeInner .welcomeDesc{
+        font-size: 13px;
+    }
+    .welcomeContainer .welcomeInner .welcomeBtn{
+        font-size: 14px;
+        padding: 6px 30px;
+    }
+    .welcomeContainer .welcomeInner{
+        padding: 0% 25px;
+    }
+    .welcomeContainer .soloLogo{
+        width: 130px;
+        margin-top: 2px;
+        margin-bottom: 6px;
+    }
+    @keyframes  expand{
+        from{
+            height: 0px;
+        }
+        to{
+            height: 430px;
+        }
+    }
+}
+@media only screen and ( max-width : 380px ) and (min-width : 321px ){
+    .welcomeContainer .collegeName{
+        font-size: 14px;
+    }
     .welcomeContainer .welcomeInner .welcomePhrase{
         width: 275px;
     }
@@ -226,16 +302,26 @@
     }
 }
 @media only screen and ( max-width : 1052px ) and ( min-width :  734px ){
+    .welcomeContainer .welcomeInner .welcomeLine{
+        font-size: 18px;
+        margin: 0px 0px;
+    }
+    .welcomeContainer .welcomeInner .welcomeDesc{
+        font-size: 15px;
+    }
     @keyframes  expand{
         from{
             height: 0px;
         }
         to{
-            height: 370px;
+            height: 400px;
         }
     }
 }
 @media only screen and ( max-width :733px ) and ( min-width :  480px ){
+    .welcomeContainer .collegeName{
+        font-size: 19px;
+    }
     .welcomeContainer .welcomeInner .welcomePhrase{
         width: 375px;
     }
